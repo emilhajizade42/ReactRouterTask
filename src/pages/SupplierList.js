@@ -42,10 +42,10 @@ function SupplierList() {
             {data.map(item=>(
               <tr key={item.id} className="table-dark">
                 <th scope="row align-items-center">{item.id}</th>
-                <td>{item.companyName}</td>
-                <td>{item.contactName}</td>
-                <td>{item.contactTitle}</td>
-                <td>{item.address.country}</td>
+                <td>{item?.companyName}</td>
+                <td>{item?.contactName}</td>
+                <td>{item?.contactTitle}</td>
+                <td>{item?.address?.country}</td>
                 <td><button onClick={()=>{deleteById(item.id)}} className="btn btn-danger">DELETE</button></td>
             </tr>
             ))}
